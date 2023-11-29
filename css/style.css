@@ -110,6 +110,8 @@ main .user__info {
 /* FOOTER */
 footer {
     height: var(--footer-h);
+    background-color: #222222;
+    color: white;
 }
 
 footer .d-flex {
@@ -127,10 +129,16 @@ footer .footer__function {
     margin: 0 5px;
 }
 
+footer .footer__symbol {
+    margin: 0 5px;
+}
+
 .footer_section i {
     font-size: 1.5rem;
 }
 
 .footer_section .footer__arrow {
     font-weight: bold;
+    line-height: 2rem;
+    vertical-align: middle;
 }
