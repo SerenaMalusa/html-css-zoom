@@ -25,9 +25,10 @@ body {
 
 /* UTILS */
 :root {
-    --user-gap: 5px;
     --container-w : 1350px;
-    --header-h: 40px;
+    --user-gap: 5px;
+    --header-h: 30px;
+    --footer-h: 45px;
 }
 
 .wrapper {
@@ -47,7 +48,35 @@ body {
 /* HEADER */
 header {
     height: var(--header-h);
+    background-color: #000000;
+
+    backdrop-filter: brigthness(100%);
 }
+
+header .d-flex {
+    justify-content: flex-end;
+    align-items: center;
+
+    height: 100%;
+}
+
+header .header__btn {
+    backdrop-filter: brigthness(20%);
+
+    background-color: #4a4a4a;
+    margin: 0 2px;
+    border: none;
+    border-radius: 5px;
+
+    padding: 2px 4px;
+    color: white;
+    font-size: 0.8rem;
+}
+
+.header__btn > * {
+    display: inline-block;
+}
+
 
 /* MAIN */
 main {
@@ -59,8 +88,11 @@ main > .d-flex {
     justify-content: center;
     gap: var(--user-gap);
 
+    padding: 50px 0;
+    background-color: #000000;
+
     /* permette scroll dei contenuti */
-    height: calc(100vh - var(--header-h)*2);
+    height: calc(100vh - var(--header-h) - var(--footer-h));
     overflow: scroll; 
 }
 
@@ -71,8 +103,8 @@ main .user {
 }
 
 main .user__info {
-    backdrop-filter: brightness(60%);
-    padding: 2px 4px;
+    backdrop-filter: brightness(40%);
+    padding: 3px 6px;
     font-size: 0.8rem;
     color: white;
 
@@ -84,5 +116,5 @@ main .user__info {
 /* FOOTER */
 
 footer {
-    height: var(--header-h);
+    height: var(--footer-h);
 }
