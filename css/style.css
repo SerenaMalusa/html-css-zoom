@@ -12,6 +12,7 @@ img {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.7rem;
 }
 
 /* DEBUG */
@@ -48,9 +49,6 @@ body {
 /* HEADER */
 header {
     height: var(--header-h);
-    background-color: #000000;
-
-    backdrop-filter: brigthness(100%);
 }
 
 header .d-flex {
@@ -67,10 +65,8 @@ header .header__btn {
     margin: 0 2px;
     border: none;
     border-radius: 5px;
-
-    padding: 2px 4px;
+    padding: 3px 6px;
     color: white;
-    font-size: 0.8rem;
 }
 
 .header__btn > * {
@@ -89,7 +85,6 @@ main > .d-flex {
     gap: var(--user-gap);
 
     padding: 50px 0;
-    background-color: #000000;
 
     /* permette scroll dei contenuti */
     height: calc(100vh - var(--header-h) - var(--footer-h));
@@ -105,7 +100,6 @@ main .user {
 main .user__info {
     backdrop-filter: brightness(40%);
     padding: 3px 6px;
-    font-size: 0.8rem;
     color: white;
 
     position: absolute;
@@ -114,7 +108,20 @@ main .user__info {
 }
 
 /* FOOTER */
-
 footer {
     height: var(--footer-h);
+}
+
+footer .d-flex {
+    width: 100%;
+    justify-content: space-between;
+}
+
+footer .footer__sct {
+    text-align: center;
+}
+
+footer .footer__function > i {
+    font-size: 1.5rem;
+    margin: 2px;
 }
