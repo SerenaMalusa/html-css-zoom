@@ -1,4 +1,4 @@
-## Esercizio di oggi: Zoom
+## Esercizio di oggi (29/11/23): Zoom
 
 nome repo: `html-css-zoom`  
 
