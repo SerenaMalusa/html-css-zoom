@@ -113,15 +113,24 @@ footer {
 }
 
 footer .d-flex {
-    width: 100%;
+    height: 100%;
     justify-content: space-between;
 }
 
-footer .footer__sct {
+footer .footer_section{
+    height: 100%;
+    align-items: center;
     text-align: center;
 }
 
-footer .footer__function > i {
+footer .footer__function {
+    margin: 0 5px;
+}
+
+.footer_section i {
     font-size: 1.5rem;
-    margin: 2px;
+}
+
+.footer_section .footer__arrow {
+    font-weight: bold;
 }
