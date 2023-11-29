@@ -7,6 +7,7 @@
 
 img {
     max-width: 100%;
+    display: block;
 }
 
 body {
@@ -15,10 +16,10 @@ body {
 
 /* DEBUG */
 .debug {
-    background-color: bisque;
+    /* background-color: bisque; */
     border: 2px dotted black;
-    padding: 20px;
-    margin-bottom: 5px;
+    /* padding: 20px; */
+    /* margin-bottom: 5px; */
 }
 
 
@@ -26,30 +27,62 @@ body {
 :root {
     --user-gap: 5px;
     --container-w : 1350px;
+    --header-h: 40px;
 }
 
 .wrapper {
-    height: 100vh;
+    height: 100wh;
 }
 
 .container {
     max-width: var(--container-w);
     margin: 0 auto;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 
 .d-flex {
     display: flex;
 }
 
+/* HEADER */
+header {
+    height: var(--header-h);
+}
+
 /* MAIN */
+main {
+    overflow: hidden;
+}
+
 main > .d-flex {
     flex-wrap: wrap;
     justify-content: center;
-    padding: 0;
     gap: var(--user-gap);
+
+    /* permette scroll dei contenuti */
+    height: calc(100vh - var(--header-h)*2);
+    overflow: scroll; 
 }
 
 main .user {
     width: calc(var(--container-w) / 7 - var(--user-gap));
+    
+    position: relative;
+}
+
+main .user__info {
+    backdrop-filter: brightness(60%);
+    padding: 2px 4px;
+    font-size: 0.8rem;
+    color: white;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* FOOTER */
+
+footer {
+    height: var(--header-h);
 }
